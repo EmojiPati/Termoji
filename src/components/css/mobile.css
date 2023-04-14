@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Teko");
+@media screen and (max-width: 600px) {
+  .nomobile {
+    visibility: hidden;
+    clear: both;
+    float: right;
+    margin: 5px auto;
+    width: 22%;
+    height: auto;
+    display: none;
+  }
+}
+@font-face {
+  font-family: Mondo;
+  src: url("../fonts/mando.otf") format("opentype");
+}
+@font-face {
+  font-family: hand; /*a name to be used later*/
+  src: url("../fonts/hand.ttf") format("truetype");
+}
+@font-face {
+  font-family: argon;
+  src: url("../fonts/argon.otf") format("opentype");
+}
+
+.termoji {
+  font-family: Mondo;
+}
+.wmessage {
+  font-family: hand;
+  font-size: 25px;
+}
+.wmessage2 {
+  font-family: hand;
+  font-size: 25px;
+}
+.welcome {
+  font-family: Teko;
+  font-size: 25px;
+  color: black;
+}
+.help {
+  color: black;
+}
