@@ -26,7 +26,7 @@ export default {
     },
     github: {
       description: "My GitHub Profile.",
-      usage: "twitter",
+      usage: "github",
       fn: () => {
         window.open("https://github.com/EmojiPati", "_blank");
         return "opening github account...";
@@ -34,7 +34,7 @@ export default {
     },
     discord: {
       description: "My Discord Account.",
-      usage: "twitter",
+      usage: "discord",
       fn: () => {
         window.open(
           "https://discordapp.com/users/407130330710147073",
