@@ -1,14 +1,16 @@
 import Terminal from "react-console-emulator";
 import commands from "../components/Commands/commands.js";
-import React from "react";
+import React, { useMemo, useState } from "react";
+import Clock from "react-live-clock";
 import getcat from "../utils/cat";
 import css from "./css/mobile.css";
 
 export default function Term() {
+  const logindate = useMemo(() => new Date().toLocaleTimeString(), []);
   const cmds = commands.commands;
   const owrs = commands.overwrites;
   const terminal = React.createRef();
-  const [prompt, setPrompt] = React.useState("Termoji@EmojiPati:~$ ");
+  const [prompt, setPrompt] = React.useState("Termoji@EmojiPati:~$");
   const [home, sethome] = React.useState("termoji");
   const [dir, setdir] = React.useState({
     termoji: [],
@@ -24,11 +26,23 @@ export default function Term() {
           height="128"
           style={{ float: "right", marginRight: "-20px", marginTop: "-20px" }}
         />, */
+        <Clock
+          style={{
+            float: "right",
+            marginRight: "-20px",
+            marginTop: "-20px",
+            fontSize: "58px",
+            color: "white",
+            fontFamily: "Hand",
+          }}
+          format={"HH:mm:ss"}
+          ticking={true}
+          timezone={"Europe/Istanbul"}
+        />,
         <div>
           <strong className="welcome">Welcome!</strong>{" "}
           <a className="wmessage">to The Termoji</a>
         </div>,
-
         <div className="wmessage2">
           This is a{" "}
           <span className="termoji" style={{ color: "#2E0249" }}>
@@ -50,6 +64,15 @@ export default function Term() {
             terminal.current.clearStdout();
           },
         },
+
+        about: {
+          description: "About Me.",
+          usage: "about",
+          fn: () => {
+            terminal.current.pushToStdout("const Reality = require(Network);");
+          },
+        },
+
         pati: {
           description: "Get a Random Cat.",
           usage: "pati",

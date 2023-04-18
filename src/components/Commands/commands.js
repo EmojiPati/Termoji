@@ -16,13 +16,6 @@ export default {
     //         return "fetching cat...\ncat fetched successfully!"
     //     }
     // },
-    about: {
-      description: "About Me.",
-      usage: "about",
-      fn: () => {
-        return "will add.";
-      },
-    },
     twitter: {
       description: "My Twitter Handle.",
       usage: "twitter",
@@ -102,9 +95,13 @@ export default {
       description: "Clears the terminal",
       usage: "clear",
     },
-    cat: {
-      description: "Get a cute cat image.",
-      usage: "cat",
+    pati: {
+      description: "Get a Random Cat.",
+      usage: "pati",
+    },
+    about: {
+      description: "About Me",
+      usage: "about",
     },
   },
 };
