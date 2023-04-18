@@ -1,12 +1,11 @@
 import Terminal from "react-console-emulator";
 import commands from "../components/Commands/commands.js";
-import React, { useMemo, useState } from "react";
+import React from "react";
 import Clock from "react-live-clock";
 import getcat from "../utils/cat";
-import css from "./css/mobile.css";
+import "./css/style.css";
 
 export default function Term() {
-  const logindate = useMemo(() => new Date().toLocaleTimeString(), []);
   const cmds = commands.commands;
   const owrs = commands.overwrites;
   const terminal = React.createRef();
@@ -40,7 +39,11 @@ export default function Term() {
           timezone={"Europe/Istanbul"}
         />,
         <div>
-          <strong className="welcome">Welcome!</strong>{" "}
+          <strong
+            style={{ fontFamily: "teko", fontSize: "25px", color: "black" }}
+          >
+            Welcome!
+          </strong>{" "}
           <a className="wmessage">to The Termoji</a>
         </div>,
         <div className="wmessage2">
@@ -69,7 +72,48 @@ export default function Term() {
           description: "About Me.",
           usage: "about",
           fn: () => {
-            terminal.current.pushToStdout("const Reality = require(Network);");
+            terminal.current.pushToStdout(`                                                                                                                                                  `);
+            terminal.current.pushToStdout(
+              // <img
+              //   src="https://emojipati.tk/NIVe0/KOWaqovi44.png/raw"
+              //   alt="cat"
+              // ></img>
+              terminal.current.pushToStdout(`
+              ███████╗███╗   ███╗ ██████╗      ██╗██╗██████╗  █████╗ ████████╗██╗
+              ██╔════╝████╗ ████║██╔═══██╗     ██║██║██╔══██╗██╔══██╗╚══██╔══╝██║
+              █████╗  ██╔████╔██║██║   ██║     ██║██║██████╔╝███████║   ██║   ██║
+              ██╔══╝  ██║╚██╔╝██║██║   ██║██   ██║██║██╔═══╝ ██╔══██║   ██║   ██║
+              ███████╗██║ ╚═╝ ██║╚██████╔╝╚█████╔╝██║██║     ██║  ██║   ██║   ██║
+              ╚══════╝╚═╝     ╚═╝ ╚═════╝  ╚════╝ ╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝
+                                                                                                                      
+const Network = require('Nwm');
+const Life = require('Gaia');
+                                                                                                                                    
+const client = new Life.Client({
+  id: 'EmojiPati',
+  token: 'Human',
+  name: 'Bestami',
+  lastName: 'Karakaya',
+  country: ['Turkey', 'Denmark', 'Japan'],
+  city: ['Hatay', 'Kopenhag', 'Uchinada'],
+  age: null
+});
+                                                                                                                                    
+const NetworkData = {
+  userName: {
+    Discord: '407130330710147073',
+    Twitter: 'EmojiPati',
+    Github: 'EmojiPati',
+    BuyMeACoffee: 'EmojiPati',
+    ArtStation: 'Emojipati' },
+    job: 'Musician, Full Stack Developer.',
+    age: null,
+    equipment: 'Roli Lightpad Block Studio Edition, Behringer Neutron Paraphonic Analog and Semi-Modular Synthesizer, Neumann TLM 103 Condenser, Ableton Push,Genelec 8350A x2, Sennheiser HD 200 PRO, Universal Audio Apollo Twin X Quad, Roli SeaBoard RISE 2'
+};
+                                                                                                                                    
+life.login('Client');
+              `)
+            );
           },
         },
 
@@ -194,11 +238,11 @@ export default function Term() {
         color: "#ffb86c",
         fontWeight: "normal",
         paddingLeft: null,
-      }} // Text colour
+      }} // Color
       promptLabelStyle={{ color: "#FF0000", fontWeight: "normal" }} // Prompt label colour
-      inputTextStyle={{ color: "#000000", fontWeight: "normal" }}
+      inputTextStyle={{ color: "white", fontWeight: "normal" }}
       messageStyle={{
-        color: "white",
+        color: "black",
         fontWeight: "normal",
         paddingLeft: null,
       }}
